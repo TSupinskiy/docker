@@ -2,14 +2,8 @@ FROM alpine
 
 RUN apk update --no-cache && apk add git
 
-ARG version=1.1
-
-ENV VERSION=$version
-
 WORKDIR /data
 
-RUN git clone https://github.com/TSupinskiy/docker
+ENTRYPOINT ["git", "clone"]
 
-COPY . /data
-
-CMD echo $VERSION
+CMD ["https://github.com/TSupinskiy/docker.git"]
