@@ -8,5 +8,5 @@ ENV MY_NAME=Taras
 COPY entrypoint.sh entrypoint.sh
 COPY entrypoint_1.sh entrypoint_1.sh
 RUN chmod u+x entrypoint.sh
-
+RUN chmod u+x entrypoint_1.sh
 CMD ["./entrypoint.sh"]
